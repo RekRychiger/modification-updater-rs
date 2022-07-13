@@ -13,7 +13,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let resource = ProjectResource::from_path(Path::new(path))?;
     let updated = resource.update(LastModification {
         actor: actor.clone(),
-        timestamp: timestamp,
+        timestamp: timestamp.clone(),
     });
     println!(
         "{}",
